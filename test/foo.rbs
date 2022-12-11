@@ -1,0 +1,5 @@
+class Foo
+  attr_accessor imported_accessor: String
+  def import1: () -> void
+  def import2: () -> bool
+end

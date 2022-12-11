@@ -1,0 +1,29 @@
+PATH
+  remote: ../..
+  specs:
+    orthoses-typeprof (0.1.0)
+      orthoses
+      typeprof
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    orthoses (1.4.0)
+      rbs (~> 2.0)
+    rack (3.0.2)
+    rake (13.0.6)
+    rbs (2.8.1)
+    typeprof (0.21.3)
+      rbs (>= 1.8.1)
+
+PLATFORMS
+  arm64-darwin-21
+
+DEPENDENCIES
+  orthoses-typeprof!
+  rack
+  rake
+  rbs
+
+BUNDLED WITH
+   2.3.26

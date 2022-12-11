@@ -1,0 +1,100 @@
+---
+sources:
+- name: ruby/gem_rbs_collection
+  remote: https://github.com/ruby/gem_rbs_collection.git
+  revision: main
+  repo_dir: gems
+path: ".gem_rbs_collection"
+gems:
+- name: ast
+  version: '2.4'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: 3cdcbea7f7a2a2ba5dffce3ee71f938f8b301687
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
+- name: i18n
+  version: '1.10'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: 3cdcbea7f7a2a2ba5dffce3ee71f938f8b301687
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
+- name: io-console
+  version: '0'
+  source:
+    type: stdlib
+- name: listen
+  version: '3.2'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: 3cdcbea7f7a2a2ba5dffce3ee71f938f8b301687
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
+- name: minitest
+  version: '0'
+  source:
+    type: stdlib
+- name: orthoses
+  version: 1.4.0
+  source:
+    type: rubygems
+- name: parallel
+  version: '1.20'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: 3cdcbea7f7a2a2ba5dffce3ee71f938f8b301687
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
+- name: rainbow
+  version: '3.0'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: 3cdcbea7f7a2a2ba5dffce3ee71f938f8b301687
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
+- name: rbs
+  version: 2.6.0
+  source:
+    type: rubygems
+- name: mutex_m
+  version: '0'
+  source:
+    type: stdlib
+- name: logger
+  version: '0'
+  source:
+    type: stdlib
+- name: set
+  version: '0'
+  source:
+    type: stdlib
+- name: pathname
+  version: '0'
+  source:
+    type: stdlib
+- name: json
+  version: '0'
+  source:
+    type: stdlib
+- name: optparse
+  version: '0'
+  source:
+    type: stdlib
+- name: rubygems
+  version: '0'
+  source:
+    type: stdlib
+- name: tsort
+  version: '0'
+  source:
+    type: stdlib
+- name: monitor
+  version: '0'
+  source:
+    type: stdlib
