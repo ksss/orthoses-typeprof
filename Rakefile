@@ -18,7 +18,8 @@ task :sig do
       base_dir: "sig"
     use Orthoses::TypeProf,
       config: TypeProf::ConfigData.new(
-        rb_files: Dir["lib/**/*.rb"]
+        rb_files: Dir["lib/**/*.rb"],
+        collection_path: ::RBS::Collection::Config::PATH
       )
     run -> { }
   end.call
