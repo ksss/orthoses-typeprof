@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    orthoses-typeprof (0.1.0)
+    orthoses-typeprof (0.2.0)
       orthoses (>= 1.6.0)
       typeprof
 
