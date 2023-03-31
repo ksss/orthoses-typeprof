@@ -39,7 +39,8 @@ module Orthoses
     private
 
     def parse(buffer)
-      ::RBS::Parser.parse_signature(buffer).each do |decl|
+      _, _, decls = ::RBS::Parser.parse_signature(buffer)
+      decls.each do |decl|
         # remove comment in class/module
         decl.members.each { |m| m.instance_eval { @comment = nil } }
         yield decl
