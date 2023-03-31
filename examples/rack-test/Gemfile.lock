@@ -2,18 +2,18 @@ PATH
   remote: ../..
   specs:
     orthoses-typeprof (0.1.0)
-      orthoses
+      orthoses (>= 1.6.0)
       typeprof
 
 GEM
   remote: https://rubygems.org/
   specs:
-    orthoses (1.4.0)
-      rbs (~> 2.0)
+    orthoses (1.6.0)
+      rbs (~> 3.0)
     rack (3.0.2)
     rake (13.0.6)
-    rbs (2.8.1)
-    typeprof (0.21.3)
+    rbs (3.0.4)
+    typeprof (0.21.7)
       rbs (>= 1.8.1)
 
 PLATFORMS
