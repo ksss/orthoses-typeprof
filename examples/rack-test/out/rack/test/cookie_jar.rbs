@@ -1,0 +1,16 @@
+class Rack::Test::CookieJar
+  DELIMITER: String
+  @default_host: String
+  @cookies: Array[Cookie]
+  def initialize: (?Array[untyped] cookies, ?String default_host) -> void
+  def initialize_copy: (untyped other) -> Array[Cookie]
+  def []: (untyped name) -> nil
+  def []=: (untyped name, untyped value) -> (Array[String] | Hash[untyped, untyped])?
+  def get_cookie: (untyped name) -> Cookie?
+  def delete: (untyped name) -> nil
+  def merge: ((Hash[untyped, untyped] | String | true)? raw_cookies, ?URI::Generic? uri) -> (Array[String] | Hash[untyped, untyped])?
+  def <<: (Cookie new_cookie) -> Array[Cookie]
+  def for: (URI::Generic uri) -> String
+  def to_hash: () -> Hash[untyped, untyped]
+  private def each_cookie_for: (URI::Generic uri) { (Cookie) -> String } -> Array[Cookie]
+end

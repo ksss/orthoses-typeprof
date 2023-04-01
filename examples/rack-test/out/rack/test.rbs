@@ -1,0 +1,13 @@
+module Rack::Test
+  VERSION: String
+
+  DEFAULT_HOST: String
+
+  MULTIPART_BOUNDARY: String
+
+  START_BOUNDARY: String
+
+  END_BOUNDARY: String
+
+  def self.encoding_aware_strings?: () -> bool
+end

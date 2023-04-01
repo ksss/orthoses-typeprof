@@ -1,0 +1,2 @@
+class Rack::Test::Error < ::StandardError
+end
