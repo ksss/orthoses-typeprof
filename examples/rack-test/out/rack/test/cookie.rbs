@@ -1,0 +1,23 @@
+class Rack::Test::Cookie
+  @default_host: String
+  @options: untyped
+  @exact_domain_match: bool
+  attr_reader name: untyped
+  attr_reader value: untyped
+  attr_reader raw: String?
+  def initialize: (String | [ bot, bot ] raw, ?URI::Generic? uri, ?String default_host) -> void
+  def replaces?: (Cookie other) -> bool
+  def empty?: () -> untyped
+  def domain: () -> untyped
+  def secure?: () -> untyped
+  def http_only?: () -> untyped
+  def path: () -> String
+  def expires: () -> Time?
+  def expired?: () -> bool?
+  def valid?: (URI::Generic? uri) -> bool
+  def matches?: (untyped uri) -> false
+  def <=>: (untyped other) -> Integer?
+  def to_h: () -> untyped
+  alias to_hash to_h
+  private def default_uri: () -> URI::Generic
+end

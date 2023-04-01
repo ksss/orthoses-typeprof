@@ -1,0 +1,33 @@
+class Rack::Test::Session
+  DEFAULT_ENV: Hash[String, String | true]
+  extend Forwardable
+  include Utils
+  @env: Hash[String, String]
+  @app: untyped
+  @after_request: Array[nil]
+  @last_request: Request?
+  @last_response: MockResponse?
+  def self.new: (untyped app, ?String default_host) -> Session
+  attr_accessor cookie_jar: CookieJar
+  attr_reader default_host: String
+  def initialize: (untyped app, ?String default_host) -> void
+  def after_request: () -> Array[nil]
+  def clear_cookies: () -> CookieJar
+  def set_cookie: ((Hash[untyped, untyped] | String | true)? cookie, ?URI::Generic? uri) -> (Array[String] | Hash[untyped, untyped])?
+  def last_request: () -> Request?
+  def last_response: () -> MockResponse?
+  def request: (untyped uri, ?Hash[untyped, untyped] env) -> MockResponse?
+  def custom_request: (untyped verb, untyped uri, ?Hash[untyped, untyped] params, ?Hash[untyped, untyped] env) -> MockResponse?
+  def header: (String name, String value) -> String?
+  def env: (String name, String value) -> String?
+  def basic_authorize: (untyped username, untyped password) -> String?
+  alias authorize basic_authorize
+  def follow_redirect!: () -> untyped
+  def restore_state: () -> untyped
+  private def close_body: (untyped body) -> nil
+  private def parse_uri: (untyped path, Hash[untyped, untyped] env) -> URI::Generic
+  private def env_for: (URI::Generic uri, Hash[untyped, untyped] env) -> (Hash[:input | String, Hash[:input | String, String | true] | MockRequest::FatalWarner | String | StringIO | true] | MockRequest::FatalWarner | String | StringIO | true)
+  private def append_query_params: ([ String? ] query_array, Hash[untyped, untyped] | String | true query_params) -> [ String? ]
+  private def multipart_content_type: (Hash[:input | String, String | true] | false env) -> (String | true)
+  private def process_request: (URI::Generic uri, Hash[:input | String, Hash[:input | String, String | true] | MockRequest::FatalWarner | String | StringIO | true] | MockRequest::FatalWarner | String | StringIO | true env) -> MockResponse?
+end

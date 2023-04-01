@@ -1,0 +1,15 @@
+class Rack::Test::UploadedFile
+  attr_reader original_filename: String?
+  attr_reader tempfile: untyped
+  attr_accessor content_type: String
+  def initialize: (untyped content, ?String content_type, ?false binary, ?original_filename: nil) -> void
+  def path: () -> untyped
+  alias local_path path
+  def method_missing: (untyped method_name, *untyped args) -> untyped
+  def append_to: (untyped buffer) -> nil
+  def respond_to_missing?: (untyped method_name, ?false include_private) -> untyped
+  def self.finalize: (untyped file) -> ^() -> untyped
+  def self.actually_finalize: (untyped file) -> untyped
+  private def initialize_from_stringio: (untyped stringio) -> untyped
+  private def initialize_from_file_path: (untyped path) -> void
+end

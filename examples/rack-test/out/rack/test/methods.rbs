@@ -1,0 +1,17 @@
+module Rack::Test::Methods
+  extend Forwardable
+
+  @_rack_test_sessions: Hash[:default, Session]
+
+  def rack_test_session: (?:default name) -> Session
+
+  alias rack_mock_session rack_test_session
+
+  def build_rack_test_session: (:default _name) -> Session
+
+  def current_session: () -> Session
+
+  def with_session: (untyped name) -> untyped
+
+  attr_accessor _rack_test_current_session: Session?
+end

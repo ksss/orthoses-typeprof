@@ -1,0 +1,17 @@
+module Rack::Test::Utils
+  extend Utils
+
+  def build_nested_query: ((Hash[untyped, untyped] | String | [ bot, bot ] | true)? value, ?String? prefix) -> String
+
+  def build_multipart: (Hash[untyped, untyped] | String | true params, ?bool _first, ?(String | bool)? multipart) -> String?
+
+  private def normalize_multipart_params: (Hash[untyped, untyped] | String | true params, ?bool first) -> Hash[String, untyped]
+
+  private def build_parts: (String buffer, Hash[String, untyped] parameters) -> String
+
+  private def _build_parts: (String buffer, Hash[String, untyped] parameters) -> Array[Array[untyped]]
+
+  private def build_primitive_part: (String buffer, String parameter_name, untyped value) -> String
+
+  private def build_file_part: (String buffer, String parameter_name, untyped uploaded_file) -> String
+end
